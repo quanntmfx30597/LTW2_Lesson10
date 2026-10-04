@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy tính bỏ túi</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="may-tinh">
+      <div class="man-hinh">
+        <div id="lich-su"></div>
+        <!--Dòng nhỏ: phép tính đang làm-->
+        <div id="ket-qua">0</div>
+        <!--Dòng lớn: số đang nhập/kết quả-->
+      </div>
+      <div class="ban-phim">
+        <!-- Hàng 1 -->
+        <button class="nut nut-xam" onclick="xoaHet()">C</button>
+        <button class="nut nut-xam" onclick="xoaSo()">CE</button>
+        <button class="nut nut-xam" onclick="phanTram()">%</button>
+        <button class="nut nut-chia" onclick="chonPhepTinh('÷')">÷</button>
+
+        <!-- Hàng 2 -->
+        <button class="nut" onclick="nhapSo('7')">7</button>
+        <button class="nut" onclick="nhapSo('8')">8</button>
+        <button class="nut" onclick="nhapSo('9')">9</button>
+        <button class="nut nut-nhan" onclick="chonPhepTinh('×')">×</button>
+
+        <!-- Hàng 3 -->
+        <button class="nut" onclick="nhapSo('4')">4</button>
+        <button class="nut" onclick="nhapSo('5')">5</button>
+        <button class="nut" onclick="nhapSo('6')">6</button>
+        <button class="nut nut-tru" onclick="chonPhepTinh('-')">-</button>
+
+        <!-- Hàng 4 -->
+        <button class="nut" onclick="nhapSo('1')">1</button>
+        <button class="nut" onclick="nhapSo('2')">2</button>
+        <button class="nut" onclick="nhapSo('3')">3</button>
+        <button class="nut nut-cong" onclick="chonPhepTinh('+')">+</button>
+
+        <!-- Hàng 5: ô 1 và ô 3 để trống -->
+        <div></div>
+        <button class="nut" onclick="nhapSo('0')">0</button>
+        <div></div>
+        <button class="nut nut-bang" onclick="tinhKetQua()">=</button>
+      </div>
+    </div>
+    <!--Kết nối file JavaScript (đặt cuối body)-->
+    <script src="script.js"></script>
+  </body>
+</html>

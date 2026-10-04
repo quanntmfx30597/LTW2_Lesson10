@@ -1,0 +1,136 @@
+/* ===== BƯỚC 3: KHUNG MÁY TÍNH ===== */
+
+/* Xóa khoảng cách mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Đưa máy tính ra giữa trang */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;   /* giữa theo chiều ngang */
+  align-items: center;       /* giữa theo chiều dọc */
+  min-height: 100vh;         /* cao bằng màn hình */
+}
+
+
+/* Khung máy tính màu xám nhạt */
+.may-tinh {
+  width: 340px;
+  background-color: #e9ecef;
+  padding: 20px;
+}
+
+
+/* ===== MÀN HÌNH ===== */
+
+.man-hinh {
+  height: 110px;
+  text-align: right;          /* chữ số nằm bên phải */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;     /* 2 dòng xếp chồng lên nhau */
+  justify-content: flex-end;  /* dồn xuống dưới */
+}
+
+
+/* Dòng nhỏ phía trên */
+#lich-su {
+  font-size: 16px;
+  color: #6c757d;
+  min-height: 20px;
+}
+
+
+/* Dòng số lớn */
+#ket-qua {
+  font-size: 40px;
+  font-weight: bold;
+  color: #212529;
+  overflow: hidden;           /* số quá dài thì không tràn ra ngoài */
+}
+
+
+/* ===== BÀN PHÍM ===== */
+
+.ban-phim {
+  display: grid;
+
+  /* 4 cột bằng nhau */
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  /* Nút nằm giữa ô */
+  justify-items: center;
+}
+
+
+/* ===== TRANG TRÍ NÚT ===== */
+
+/* Kiểu chung cho TẤT CẢ các nút */
+.nut {
+  width: 54px;
+  height: 54px;
+
+  border: none;
+  border-radius: 50%;         /* bo viền thành hình tròn */
+
+  background-color: transparent;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #212529;
+
+  cursor: pointer;
+
+  transition: transform 0.1s;
+}
+
+
+/* Rê chuột vào nút: phóng to một chút */
+.nut:hover {
+  transform: scale(1.1);
+}
+
+
+/* Nút C, CE, % */
+.nut-xoa {
+  background-color: #f1f1f1;
+}
+
+
+/* 5 nút phép tính - mỗi nút một màu */
+
+/* chia */
+.nut-chia {
+  background-color: #20c2a3;
+}
+
+
+/* nhân */
+.nut-nhan {
+  background-color: #ff8500;
+}
+
+
+/* trừ */
+.nut-tru {
+  background-color: #ff0800;
+}
+
+
+/* cộng */
+.nut-cong {
+  background-color: #7f8fe8;
+}
+
+
+/* bằng */
+.nut-bang {
+  background-color: #9b7bb5;
+}
